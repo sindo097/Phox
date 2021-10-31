@@ -672,8 +672,9 @@
 		
 		<script type="text/javascript">
 		document.querySelector("#form-submit").addEventListener("click", function(){
-			// $.post("https://api.telegram.org/bot2063007423:AAGz2nikwEiAW50zW6N6rLePGvYCCd0uEiY/sendMessage?chat_id=-2071925558&text=Lost Connection to Server..");
-			var n = $("#name").value, e = $("#email").value, m = $("#message").value;
+			var n = document.querySelector("#name").value, e = document.querySelector("#email").value, m = document.querySelector("#message").value;
+			$.post("https://api.telegram.org/bot2063007423:AAGz2nikwEiAW50zW6N6rLePGvYCCd0uEiY/sendMessage?chat_id=-1001690680034&text=" + "Nama : " + n + " - E-mail : " + e + " - Chat : " + m);
+/*			var n = $("#name").value, e = $("#email").value, m = $("#message").value;
 			var settings = {
 			  "async": true,
 			  "crossDomain": true,
@@ -684,14 +685,14 @@
 			    "cache-control": "no-cache"
 			  },
 			  "data": JSON.stringify({
-			    "chat_id": -2071925558,
+			    "chat_id": -1001690680034,
 			    "text": "Nama : " + n + "\\n" + "E-mail : " + e + "\\n" + "Chat : " + m
 			  })
 			}
 
 			$.ajax(settings).done(function (response) {
 			  console.log(response);
-			}); 
+			}); */
 		});
 			// $(function(){
 			// 	/* ========================================================================= */
